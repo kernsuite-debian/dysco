@@ -1,0 +1,40 @@
+Source: dysco
+Section: science
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 8.0.0), cmake, libhdf5-dev, libboost-system-dev,
+ libboost-filesystem-dev, libboost-test-dev, libgsl0-dev
+Standards-Version: 3.9.4
+Homepage: https://github.com/aroffringa/dysco
+Vcs-Git: git://github.com/kernsuite-debian/dysco.git
+Vcs-Browser: http://github.com/kernsuite-debian/dysco.git
+
+Package: dysco
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A compressing storage manager for Casacore mearement sets
+ The volume of radio-astronomical data is a considerable burden in the processing
+ and storing of radio observations with high time and frequency resolutions and
+ large bandwidths. Lossy compression of interferometric radio-astronomical data
+ is considered to reduce the volume of visibility data and to speed up
+ processing.  A new compression technique named "Dysco" is introduced that
+ consists of two steps: a normalization step, in which grouped visibilities are
+ normalized to have a similar distribution; and a quantization and encoding step,
+ which rounds values to a given quantization scheme using a dithering scheme.
+ Several non-linear quantization schemes are tested and combined with different
+ methods for normalizing the data. Four data sets with observations from the
+ LOFAR and MWA telescopes are processed with different processing strategies and
+ different combinations of normalization and quantization. The effects of
+ compression are measured in image plane.  The noise added by the lossy
+ compression technique acts like normal system noise. The accuracy of Dysco is
+ depending on the signal-to-noise ratio of the data: noisy data can be compressed
+ with a smaller loss of image quality. Data with typical correlator time and
+ frequency resolutions can be compressed by a factor of 6.4 for LOFAR and 5.3 for
+ MWA observations with less than 1% added system noise. An implementation of the
+ compression technique is released that provides a Casacore storage manager and
+ allows transparent encoding and decoding. Encoding and decoding is faster than
+ the read/write speed of typical disks.  The technique can be used for LOFAR and
+ MWA to reduce the archival space requirements for storing observed data. Data
+ from SKA-low will likely be compressible by the same amount as LOFAR. The same
+ technique can be used to compress data from other telescopes, but a different
+ bit-rate might be required.
