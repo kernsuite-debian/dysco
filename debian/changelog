@@ -1,3 +1,12 @@
+dysco (1.0.1-1) xenial; urgency=medium
+
+  * make debian files mit
+  * add watch file
+  * Imported Upstream version 1.0.1
+  * Fix lintian warnings
+
+ -- KERN packaging <packaging@kernsuite.info>  Tue, 31 Oct 2017 17:24:01 +0200
+
 dysco (1.0-1kern1) xenial; urgency=medium
 
   * added missing casacore-dev dependency
