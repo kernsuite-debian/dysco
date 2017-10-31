@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/dysco-$1\.tar\.gz/ \
+  https://github.com/aroffringa/dysco/tags .*/v?(\d\S+)\.tar\.gz
