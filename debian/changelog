@@ -1,4 +1,4 @@
-dysco (1.0.1-1) xenial; urgency=medium
+dysco (1.0.1-1kern2) xenial; urgency=medium
 
   * make debian files mit
   * add watch file
