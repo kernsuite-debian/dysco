@@ -5,9 +5,3 @@ testsolve/test
 aocommon
 .kdev4/
 wiki/
-obj-x86_64-linux-gnu/
-debian/debhelper-build-stamp
-debian/*.debhelper.log
-debian/*.substvars
-debian/dysco/
-debian/files
