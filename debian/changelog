@@ -1,3 +1,10 @@
+dysco (1.2-1) bionic; urgency=medium
+
+  [ Gijs Molenaar ]
+  * New upstream version 1.2
+
+ -- KERN packaging <packaging@kernsuite.info>  Tue, 08 Jan 2019 16:29:39 +0200
+
 dysco (1.1-1kern1) bionic; urgency=medium
 
   * New upstream version 1.1
