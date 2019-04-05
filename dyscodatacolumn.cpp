@@ -68,7 +68,10 @@ void DyscoDataColumn::initializeEncodeThread(void** threadData)
 	}
 	ThreadData* newThreadData = new ThreadData(encoder);
 	// Seed every thread from a random number
-	newThreadData->rnd.seed(_rnd());
+	if(_randomize)
+		newThreadData->rnd.seed(_rnd());
+	else
+		std::cout << "Warning: New thread NOT seeded.\n";
 	*reinterpret_cast<ThreadData**>(threadData) = newThreadData;
 }
 
@@ -92,6 +95,18 @@ size_t DyscoDataColumn::metaDataFloatCount(size_t nRows, size_t nPolarizations, 
 size_t DyscoDataColumn::symbolCount(size_t nRowsInBlock, size_t nPolarizations, size_t nChannels) const
 {
 	return _decoder->SymbolCount(nRowsInBlock, nPolarizations, nChannels);
+}
+
+size_t DyscoDataColumn::defaultThreadCount() const
+{
+	if(!_randomize)
+	{
+		std::cout << "Warning: using only one thread to avoid randomizing the results.\n";
+		return 1;
+	}
+	else {
+		return ThreadedDyscoColumn::defaultThreadCount();
+	}
 }
 
 } // end of namespace
