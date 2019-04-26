@@ -41,7 +41,7 @@ Description: Compressing storage manager for Casacore mearement sets
  amount as LOFAR. The same technique can be used to compress data from other
  telescopes, but a different bit-rate might be required.
 
-Package: libdyscostman0
+Package: libdyscostman2
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: dysco (<< 1.0.1-1)
@@ -73,9 +73,9 @@ Description: Compressing storage manager for Casacore mearement sets
  amount as LOFAR. The same technique can be used to compress data from other
  telescopes, but a different bit-rate might be required.
 
-Package: dyscostma-dev
+Package: dysco-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libdyscostman0 (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libdyscostman2 (= ${binary:Version})
 Replaces: dysco (<< 1.0.1-1)
 Description: Compressing storage manager for Casacore mearement sets
  The volume of radio-astronomical data is a considerable burden in the

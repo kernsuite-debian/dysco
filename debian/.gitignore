@@ -1,0 +1,8 @@
+.debhelper/                       
+*.substvars                   
+dysco/                            
+dysco-dev/
+libdyscostman2/                   
+files                             
+tmp/                              
+

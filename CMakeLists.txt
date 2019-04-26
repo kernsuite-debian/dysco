@@ -39,7 +39,7 @@ set_property(TARGET dyscostman-object PROPERTY POSITION_INDEPENDENT_CODE 1)
 # Note: casapy fails if Casa is linked in the storage manager, so we have to trust that
 # casapy's version of casacore is binary compatible with this storage manager's casacore.
 add_library(dyscostman SHARED $<TARGET_OBJECTS:dyscostman-object>)
-set_target_properties(dyscostman PROPERTIES SOVERSION 0)
+set_target_properties(dyscostman PROPERTIES SOVERSION 2)
 target_link_libraries(dyscostman ${GSL_LIB} ${GSL_CBLAS_LIB} ${CASACORE_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
 add_executable(dscompress dscompress.cpp stopwatch.cpp)

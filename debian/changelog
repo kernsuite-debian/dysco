@@ -1,3 +1,9 @@
+dysco (1.2-1kern2) bionic; urgency=medium
+
+  * set so version to 2
+
+ -- KERN packaging <packaging@kernsuite.info>  Fri, 26 Apr 2019 13:47:20 +0200
+
 dysco (1.2-1kern1) bionic; urgency=medium
 
   * force build with casacore 3.0
